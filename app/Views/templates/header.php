@@ -9,11 +9,16 @@
         body{  
             background-color:#eee;  
         }  
-        h1, h2, h3, h4, p, a, li, ul{  
+        h1, h2, h3, h4, p, li, ul{  
             font-family: arial, sans-serif;  
             color: black;  
             text-decoration: none;  
-        }  
+        } 
+		a{
+		   font-family: arial, sans-serif;  
+           color: blue;  
+           text-decoration: none; 
+		}
         #nav{  
             margin: 50px auto 0 auto;  
             width: 10000px;  
