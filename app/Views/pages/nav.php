@@ -2,9 +2,8 @@
 <div id="container">  
     <div id="nav">  
         <ul>  
-            <li><a href="#">Home</a></li>  
-            <li><a href="#">About Us</a></li>  
-            <li><a href="#">Contact Us</a></li>  
-            <li><a href="#">Career</a></li>  
+            <li><a href="/Form/view/home">Home</a></li>  
+            <li><a href="/Form/view/about">About</a></li>  
+            <li><a href="/Form/view/contact">Contact</a></li>
         </ul>  
     </div>  
