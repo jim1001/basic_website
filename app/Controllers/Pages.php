@@ -3,7 +3,7 @@
 use CodeIgniter\Controller;  
 //defined('BASEPATH') OR exit('No direct script access allowed');  
   
-class Form extends Controller {  
+class Pages extends Controller {  
   
 	public function view($page = 'home')
 	{
