@@ -38,7 +38,7 @@ class Login extends Controller {
         if ($user=='jim' && $pass=='123')   
         {  
             //declaring session  
-            $this->session->set(array('user'=>$user));  
+            $_SESSION['user']=$user . ' saved to $_SESSION';	
       		echo view('pages/welcome_view');  
         }  
         else{  
