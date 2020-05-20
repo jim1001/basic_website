@@ -1,5 +1,6 @@
 <div id="welcome">
-   Welcome <?php echo $_SESSION['user']; ?>
+
+   <h1>Welcome <?php $session->get('user'); ?></h1>
 <br>  
     <?php echo anchor('Login/logout', 'Logout'); ?>  
 </div>  	

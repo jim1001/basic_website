@@ -3,7 +3,7 @@
 use CodeIgniter\Controller; 
 
   
-class Login extends Controller { 
+class Login extends BaseController { 
 
 	/* Function: initController
 	** Sole purpose for inclusion is to initialize a session
@@ -28,7 +28,7 @@ class Login extends Controller {
 
 		echo view('templates/header', $data);
 		echo view('pages/nav', $data);
-		echo view('pages/login_view', $data);
+		echo view('pages/login_view', $data); //picks up login_view.php from app\Views\pages
 		echo view('templates/footer', $data);
 	}
 	public function process()  
@@ -38,8 +38,10 @@ class Login extends Controller {
         if ($user=='jim' && $pass=='123')   
         {  
             //declaring session  
-            $this->session->set(array('user'=>$user));  
-      		echo view('pages/welcome_view');  
+            $this->session->set(array('user'=>$user)); 
+				//$_SESSION['user']=$user;	
+      		//echo view('pages/welcome_view');  
+			return redirect()->to("/Pages/view/welcome_view");
         }  
         else{  
             $data['error'] = 'Your Account is Invalid';  

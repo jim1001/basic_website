@@ -1,6 +1,7 @@
 <div id="login"> 
     <?php echo isset($error) ? $error : ''; ?>  
-    <form method="post" action="<?php echo site_url('Login/process'); ?>"> <!-- Call Controller Login's process method -->
+	<h1>Login</h1>
+    <form method="post" action="<?php echo site_url('Login/process'); ?>">
         <table cellpadding="2" cellspacing="2">  
             <tr>  
                 <td><th>Username:</th></td>  

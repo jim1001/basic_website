@@ -15,7 +15,7 @@ class Pages extends Controller {
 
 		$data['title'] = ucfirst($page); // Capitalize the first letter
 
-		echo view('templates/header', $data);
+		echo view('templates/header', $data); //this is displaying a view within the class's view() function
 		echo view('pages/nav', $data);
 		echo view('pages/'.$page, $data);
 		echo view('templates/footer', $data);

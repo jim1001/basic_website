@@ -9,5 +9,6 @@
 			
             <li><a href="/Pages/view/about"> About |</a></li>  
             <li><a href="/Pages/view/contact"> Contact |</a></li>
+			<li><a href="/Pages/view/profile"> Profile |</a></li>
         </ul>  
     </div>  
