@@ -41,8 +41,8 @@ class Login extends Controller {
 			$this->view('welcome_view');
         }  
         else{  
-            $data['error'] = 'Your Account is Invalid';  
-			echo view('pages/login_view', $data);
+            $data_in['error'] = 'Your Account is Invalid';  
+			$this->view('login_view',$data_in);
         }  
     }  
     public function logout()  
@@ -51,10 +51,10 @@ class Login extends Controller {
 		unset($_SESSION['user']);  //Ref: https://codeigniter.com/user_guide/libraries/sessions.html#removing-session-data
         return redirect()->to("Login"); // Ref: https://forum.codeigniter.com/thread-69869.html 
     } 
-	public function view($page)
+	public function view($page, $data=[])
 	/* Same as Pages
 		Couldn't call view method of Pages without losong session data so create
-		identical method here
+		similar method here
 	*/ 
 	{
 		if ( ! is_file(APPPATH.'/Views/pages/'.$page.'.php'))
@@ -62,7 +62,7 @@ class Login extends Controller {
 			// Whoops, we don't have a page for that!
 			throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
 			}
-
+	
 		$data['title'] = ucfirst($page); // Capitalize the first letter
 
 		echo view('templates/header', $data);
