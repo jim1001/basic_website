@@ -51,7 +51,6 @@ class Profile extends Controller {
 		echo view('templates/header', $data);
 		echo view('pages/nav', $data);
 		echo view('pages/profile_view', $data);
-		echo $_SESSION['user'];
 		echo view('templates/footer', $data);
 	}
     
